@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="box">
+	<h1>Password Change Form</h1>
+    <form action="{{ url_for('change') }}" method="POST">
+    	<input type="password" name="old_pass" placeholder="Old Password" required="required" />
+		<input type="password" name="password" placeholder="Password" required="required" />
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Change Password</button>
+    </form>
+</div>
+
+{% endblock %}
